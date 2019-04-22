@@ -1,13 +1,12 @@
 
 #include<stdio.h>
 
-void print_sudoku(int sudoku[9][9])
-{
+void print_sudoku(int sudoku[9][9]){
   printf("The Sudoku contains:\n");
-  for (int j=0; j<9; j++)
-  {
-    for (int i=0; i<9;i++)
-    {
+  for (int j=0; j<9; j++){
+    if(j==3 ||j==6)printf("-------------------------------\n");
+    for (int i=0; i<9;i++){
+      if(i==3 ||i==6)printf("|  ");
       printf("%d  ",sudoku[j][i]);
     }
     printf("\n");
@@ -70,9 +69,10 @@ void solve_sudoku(int sudoku[9][9]){
 }
 
 
+/*
 
-//int main(){
-  /*
+int main(){
+    
    int Sudoku[9][9]={
          {5, 3, 0, 0, 7, 0, 0, 0, 0},
 		     {6, 0, 0, 1, 9, 5, 0, 0, 0},
@@ -83,9 +83,9 @@ void solve_sudoku(int sudoku[9][9]){
 		     {0, 6, 0, 0, 0, 0, 2, 8, 0},
 		     {0, 0, 0, 4, 1, 9, 0, 0, 5},
 		     {0, 0, 0, 0, 8, 0, 0, 7, 9}};
-         */
+    
    //very hard
-   /*
+   
     int Sudoku[9][9] = {
       {8,0,0,0,0,0,0,0,0},
       {0,0,3,6,0,0,0,0,0},
@@ -97,10 +97,10 @@ void solve_sudoku(int sudoku[9][9]){
       {0,0,8,5,0,0,0,1,0},
       {0,9,0,0,0,0,4,0,0}
     };
-    */
+    
     
    //not possible
-   /*
+   
     int Sudoku[9][9]={
       {1,2,3,4,5,6,7,8,9},
       {0,0,0,0,0,0,0,0,0},
@@ -111,9 +111,10 @@ void solve_sudoku(int sudoku[9][9]){
       {0,0,0,0,0,0,0,0,6},
       {3,7,9,0,0,0,0,0,4},
       {0,0,0,0,0,0,0,2,1}
-    };*/
+    };
+    
 
-/*
+
   printf("Input puzzle is:\n");
   print_sudoku(Sudoku);
   
