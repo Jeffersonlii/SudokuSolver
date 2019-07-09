@@ -13,7 +13,7 @@ int Sudoku[9][9]={
 	 {0, 0, 0, 4, 1, 9, 0, 0, 5},
 	 {0, 0, 0, 0, 8, 0, 0, 7, 9}};
 
-, call the api like so, 
+call the api like so, 
 
 solve_sudoku(Sudoku);
 
